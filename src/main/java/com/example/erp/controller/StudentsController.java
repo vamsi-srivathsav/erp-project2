@@ -24,11 +24,14 @@ public class StudentsController {
         System.out.println(student.getFirst_name());
         System.out.println(student.getLast_name());
         System.out.println(student.getEmail());
-//        Session session = SessionUtil.getSession();
-//        Transaction transaction = session.beginTransaction();
-//        session.save(student);
-//        transaction.commit();
-//        session.close();
+        System.out.println("------------------------------");
+
+        Session session = SessionUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(student);
+        transaction.commit();
+        session.close();
+
         return Response.ok().build();
 
     }

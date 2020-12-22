@@ -1,0 +1,120 @@
+<html>
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<style>
+
+    body
+    {
+        background-image : url(iiitb-mobile.jpg);
+        background-size : cover;
+    }
+
+    .login
+    {
+        margin-top : 100px;
+    }
+    .login .card
+    {
+        background : rgba(0,0,0, 0.6);
+    }
+    .login label
+    {
+        font-size : 16px;
+        color : #aaa;
+    }
+    .login input
+    {
+        font-size : 22px !important;
+        color : #aaa;
+    }
+
+    .login button:hover
+    {
+        border-radius : 15%;
+    }
+
+</style>
+
+<body id = "body">
+<div class = "row login">
+    <div class = "col s12 l4 offset-l4">
+        <p id="addContent"></p>
+        <form>
+            <div class = "card">
+                <div class = "card-action blue darken-4 white-text center-align">
+                    <h3> Admin </h3>
+                </div>
+                <div class = "card-content">
+                    <div class = "form-field">
+                        <label for = "email">User ID </label>
+                        <input type = "text" id = "email">
+                    </div>
+                    <div class = "form-field">
+                        <label for = "password">Password </label>
+                        <input type = "password" id = "password">
+                    </div>
+                    <div class = "form-field center-align">
+                        <button class = "btn-large blue darken-4" id="btnSubmit">Login</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+
+
+    <script>
+    $(document).ready(function () {
+        $("#btnSubmit").click(function (event) {
+            //stop submit the form, we will post it manually.
+            event.preventDefault();
+
+    var url = "http://localhost:8080/academic_erp_war_exploded/webapi/employee";
+    var data = {email : "", password : ""};
+    data.email = document.getElementById("email").value;
+    data.password = document.getElementById("password").value;
+    /* $.post(url, data, function(data1, status){
+         if(data1 === "success")
+         {
+             location.replace("http://localhost:8080/academic_erp_war_exploded/studentdata.html");
+         }
+         else
+         {
+             document.getElementById("addContent").innerHTML = "Invalid Username / Password";
+         }
+     });*/
+    console.log("Input :: "+data);
+    $.ajax({
+        url: url,
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function(data1){
+            console.log("Output :: "+data1);
+            // if(data1["status"] === "success")
+            // {
+            //       location.replace("http://localhost:8080/academic_erp_war_exploded/studentdata.html");
+            // }
+            // else
+            // {
+            //       document.getElementById("addContent").innerHTML = "Invalid Username / Password";
+            // }
+            location.replace("http://localhost:8080/academic_erp_war_exploded/dashboard.html");
+        },
+        error: function (e) {
+            // $("#result").text(e.responseText)
+            console.log("ERROR : ", e);
+            //$("#btnSubmit").prop("disabled", false);
+        }
+
+    });
+        });
+    });
+    </script>
+
+</body>
+</html>

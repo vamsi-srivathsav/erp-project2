@@ -1,5 +1,7 @@
 package com.example.erp.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,10 +17,15 @@ public class Students {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "Student_Courses", joinColumns = {@JoinColumn(name = "student_id")},
-            inverseJoinColumns = {@JoinColumn(name = "course_id")})
-    private List<Courses> courses;
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(name = "Student_Courses", joinColumns = {@JoinColumn(name = "student_id")},
+//            inverseJoinColumns = {@JoinColumn(name = "course_id")})
+//    private List<Courses> courses;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="domain_id")
+    @JsonIgnore
+    public Domains domain;
 
     public Students() {
     }
@@ -27,6 +34,14 @@ public class Students {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
+    }
+
+    public Integer getStudent_id() {
+        return student_id;
+    }
+
+    public void setStudent_id(Integer student_id) {
+        this.student_id = student_id;
     }
 
     public String getFirst_name() {
@@ -53,19 +68,19 @@ public class Students {
         this.email = email;
     }
 
-    public Integer getStudent_id() {
-        return student_id;
+//    public List<Courses> getCourses() {
+//        return courses;
+//    }
+//
+//    public void setCourses(List<Courses> courses) {
+//        this.courses = courses;
+//    }
+
+    public Domains getDomain() {
+        return domain;
     }
 
-    public void setStudent_id(Integer student_id) {
-        this.student_id = student_id;
-    }
-
-    public List<Courses> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Courses> courses) {
-        this.courses = courses;
+    public void setDomain(Domains domain) {
+        this.domain = domain;
     }
 }

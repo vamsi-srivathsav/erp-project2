@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Domain</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+    <link href="assets/css/mod_domain_css.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container">
+
+
+
+</div>
+
+<form id="mod_domain_form">
+    <div class="form-group">
+        <div class="mb-3">
+            <label for="domains">Select Domain</label>
+            <select class="custom-select d-block w-100" id="domains" required>
+                <option value="">Choose...</option>
+
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid domain/s.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="newProgram">New Domain(Program) Name:</label>
+        <input type="text" class="form-control" id="newProgram" placeholder="M.Tech CSE">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="newBatch">Batch Year:</label>
+            <input type="text" class="form-control" id="newBatch" placeholder="2020">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="newBatchCapacity">Batch Capacity</label>
+            <input type="text" class="form-control" id="newBatchCapacity" placeholder="160">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newQualification">Qualification</label>
+        <input type="text" class="form-control" id="newQualification" placeholder="BE/B.Tech in CS">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/modDomain.js"></script>
+</html>

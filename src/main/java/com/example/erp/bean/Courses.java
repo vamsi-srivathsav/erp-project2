@@ -12,8 +12,8 @@ public class Courses {
     private String description;
     private int credits;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "courses")
-    private List<Students> students;
+//    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "courses")
+//    private List<Students> students;
 
 
     public Courses() {
@@ -57,11 +57,11 @@ public class Courses {
         this.credits = credits;
     }
 
-    public List<Students> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Students> students) {
-        this.students = students;
-    }
+//    public List<Students> getStudents() {
+//        return students;
+//    }
+//
+//    public void setStudents(List<Students> students) {
+//        this.students = students;
+//    }
 }

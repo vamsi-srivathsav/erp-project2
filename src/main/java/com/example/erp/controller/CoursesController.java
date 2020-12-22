@@ -1,6 +1,10 @@
 package com.example.erp.controller;
 
+import com.example.erp.bean.Courses;
+import com.example.erp.utils.SessionUtil;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -38,6 +42,17 @@ public class CoursesController {
         System.out.println(name);
         System.out.println(description);
         System.out.println(credits);
+
+        Courses course = new Courses(name, description, credits);
+
+        Session session = SessionUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.save(course);
+
+        transaction.commit();
+        session.close();
+
         return Response.ok().build();
 
     }
