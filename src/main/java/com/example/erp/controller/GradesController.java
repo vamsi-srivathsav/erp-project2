@@ -33,15 +33,14 @@ public class GradesController {
 //        System.out.println(domain.getProgram());
 //        System.out.println(domain.getQualification());
 
-//        System.out.println("------------------------------inGradesController------");
+//        System.out.println("------------------------------inGradesController------")
 
-        Session session = SessionUtil.getSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(grade);
-        transaction.commit();
-        session.close();
+        GradeService gsObj = new GradeService();
+        if(gsObj.updateGrade(grade)){
+            return Response.ok().build();
+        }
+        return Response.status(203).build();
 
-        return Response.ok().build();
 
     }
 

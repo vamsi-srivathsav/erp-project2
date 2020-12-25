@@ -17,6 +17,20 @@ import java.util.List;
 public class GradeDaoImpl implements GradeDao{
 
     @Override
+    public boolean addGrade(Grades grade) {
+        try (Session session = SessionUtil.getSession()) {
+            Transaction transaction = session.beginTransaction();
+//            session.save(course);
+            session.saveOrUpdate(grade);
+            transaction.commit();
+            return true;
+        } catch (HibernateException exception) {
+            System.out.print(exception.getLocalizedMessage());
+            return false;
+        }
+    }
+
+    @Override
     public boolean updateGrade(Grades grade) {
         try (Session session = SessionUtil.getSession()) {
             Transaction transaction = session.beginTransaction();

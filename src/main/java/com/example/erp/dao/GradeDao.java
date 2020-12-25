@@ -8,4 +8,5 @@ import java.util.List;
 public interface GradeDao {
     List<Grades> getAllGrades();
     boolean updateGrade(Grades grade);
+    boolean addGrade(Grades grade);
 }

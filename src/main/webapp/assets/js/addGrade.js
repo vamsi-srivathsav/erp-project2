@@ -19,13 +19,12 @@ student_form.addEventListener('submit', async (e) => {
         }).then(
             response => {
                 console.log(response['status']);
-                if(response['status'] === 203){
+                if(response['status'] === 200){
                     alert("Grade Details added successfully !!!");
                     location.reload();
                 }else{
-                    document.getElementById("login-alert").style.display = "none";
-                    document.getElementById("login-success").style.display = "block";
-
+                    alert("Please enter valid grade details !!!");
+                    location.reload();
                 }
             }
         );
