@@ -26,6 +26,7 @@ student_form.addEventListener('submit', async (e) => {
 course_form.onsubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
+    let id=6;
     if (course_form.checkValidity() === true) {
       let form_data = new FormData();
       form_data.append('name', document.getElementById('name').value);

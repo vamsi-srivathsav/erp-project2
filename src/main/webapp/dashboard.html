@@ -5,39 +5,63 @@
     <title>Admin Page</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/form-validation.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"
 </head>
 <body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--    <a class="navbar-brand" href="#">Navbar</a>-->
+    <a href="dashboard.html">
+    <img src="assets/imgs/aditech_logo.png" id="logo-img" width="45" height="37"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="row gy-5"></div>
-<div class="row gy-5"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_domain.html">Add Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mod_domain.html">Modify Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view.html">View list of Students</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRUD on Grades
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="add_grade.html">Create/Add Grades</a>
+                    <a class="dropdown-item" href="get_grades.html">Read All Grades</a>
+                    <a class="dropdown-item" href="update_grades.html">Update a Grade</a>
+                    <a class="dropdown-item" href="delete_grades.html">Delete Grades</a>
 
-<div class="container overflow-hidden">
-    <div class="col-md-8 order-md-1">
-        <h2 class="mb-3">Admin Page</h2>
-        <div class="row gy-5">
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                   <a href="add_domain.html" class="btn btn-info" tabindex="-1" role="button" >Add Domain</a>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <a href="mod_domain.html" class="btn btn-info" tabindex="-1" role="button" >Modify Domain</a>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <a href="view.html" class="btn btn-info" tabindex="-1" role="button" >View Students</a>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <a href="crud.html" class="btn btn-info" tabindex="-1" role="button" >CRUD</a>
-                </div>
-            </div>
-        </div>
+            </li>
+
+        </ul>
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
     </div>
-</div>
+</nav>
+<div class="welcome-admin"> Welcome, Admin !!!</div>
+<img src="assets/imgs/iiitb_campus_logo.jpg" id="campus-bg-img">
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="dashboard.html">ESD Project, MT2020164 - MT2020170</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 </body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

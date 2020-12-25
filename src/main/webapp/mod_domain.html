@@ -6,16 +6,54 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/form-validation.css" rel="stylesheet">
     <link href="assets/css/mod_domain_css.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
 </head>
 <body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--    <a class="navbar-brand" href="#">Navbar</a>-->
+    <img src="assets/imgs/aditech_logo.png" id="logo-img" width="45" height="37">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_domain.html">Add Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mod_domain.html">Modify Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="view.html">View list of Students</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRUD on Grades
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
 
-
-
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="container font-class1" >
+    <h1 class="display-5 modify-domain-head">Modify Domain</h1>
 </div>
-
-<form id="mod_domain_form">
+<form id="mod_domain_form" class="font-class1">
     <div class="form-group">
         <div class="mb-3">
             <label for="domains">Select Domain</label>
@@ -48,8 +86,9 @@
         <input type="text" class="form-control" id="newQualification" placeholder="BE/B.Tech in CS">
     </div>
 
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Modify Domain</button>
 </form>
+
 </body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

@@ -1,0 +1,20 @@
+#view_students_form{
+    margin-top: 80px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#table_div{
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#logo-img{
+    margin-right: 10px;
+}
+#select-domain-text{
+    font-family: 'B612', sans-serif;
+}
+.table-head-cus{
+    text-align: center;
+}

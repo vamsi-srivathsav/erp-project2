@@ -51,6 +51,11 @@ async function fetch_domains(){
     domains_option.innerHTML = '<option value=""> Choose...</option>';
 
     for(let i = 0 ; i<domains.length ; i++){
-        domains_option.innerHTML += '<option value="'+domains[i]["domain_id"]+'">'+domains[i]["program"]+'</option>';
+        let curProgram = domains[i]["program"];
+        let curCapacity = domains[i]["capacity"];
+        let curBatch = domains[i]["batch"];
+        let curOption = curProgram + " [ BATCH: " + curBatch + "] " + " [ CAPACITY" + curCapacity +"] ";
+        // alert("dfd");
+        domains_option.innerHTML += '<option value="'+domains[i]["domain_id"]+'">'+curOption+'</option>';
     }
 }

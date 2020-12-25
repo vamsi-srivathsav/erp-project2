@@ -80,6 +80,7 @@ public class DomainsController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getStudentsDetails(Domains domain) throws URISyntaxException {
+//        System.out.println("here:::::::::::::::::::::::::::::::::::::::::");
         DomainService dsObj = new DomainService();
         List<Students> students = dsObj.getStudentsDetails(domain);
         if(students == null){

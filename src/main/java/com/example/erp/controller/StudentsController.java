@@ -21,10 +21,6 @@ public class StudentsController {
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response registerStudent(Students student) throws URISyntaxException {
-        System.out.println(student.getFirst_name());
-        System.out.println(student.getLast_name());
-        System.out.println(student.getEmail());
-        System.out.println("------------------------------");
 
         Session session = SessionUtil.getSession();
         Transaction transaction = session.beginTransaction();

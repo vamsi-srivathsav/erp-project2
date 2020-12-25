@@ -1,5 +1,33 @@
 .container {
   max-width: 960px;
 }
+#logo-img{
+  margin-right: 10px;
+}
+#campus-bg-img{
+  opacity: 0.4;
+  height: 455px;
+  width: 100%;
+}
+#footer-pos{
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
 
+}
+.font-class1{
+  font-family: 'B612', sans-serif;
+}
+.modify-domain-head{
+  position: relative;
+  top: 25px;
+  text-align: center;
+}
+.welcome-admin{
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: xxx-large;
+  color: #191313;
+}
 .lh-condensed { line-height: 1.25; }

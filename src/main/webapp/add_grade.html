@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Students</title>
+    <title>Add Grade</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/form-validation.css" rel="stylesheet">
-    <link href="assets/css/view_students.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!--    <a class="navbar-brand" href="#">Navbar</a>-->
     <img src="assets/imgs/aditech_logo.png" id="logo-img" width="45" height="37">
@@ -50,40 +49,46 @@
         </form>
     </div>
 </nav>
-<div class="container font-class1" >
-    <h1 class="display-5 modify-domain-head">Student Details</h1>
-</div>
-<form id="view_students_form" class="font-class1">
-    <div class="form-group">
-        <div class="mb-3">
-            <label for="domains" id="select-domain-text">Select Domain</label>
-            <select class="custom-select d-block w-100" id="domains" required>
-                <option value="">Choose...</option>
 
-            </select>
-            <div class="invalid-feedback">
-                Please select a valid domain/s.
+<div class="container font-class1" >
+    <h1 class="display-5"  style="text-align: center">Add a new Grade</h1>
+    <form class="add-the-domain" id="add-grade" novalidate>
+
+        <div class="row mb-3">
+            <label for="gletter" class="col-sm-3 col-form-label">Enter Grade Letter</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gletter">
             </div>
         </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Search Students</button>
-</form>
-<div id="table_div">
-    <table class="table table-hover table-dark font-class1 table-head-cus">
-    <thead>
-    <tr>
-        <th scope="col">Student ID</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-    </tr>
-    </thead>
-    <tbody id="tbody">
-    </tbody>
-    </table>
+        <div class="row mb-3">
+            <label for="gpoints" class="col-sm-3 col-form-label">Enter Grade Points</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gpoints">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="gcomment" class="col-sm-3 col-form-label">Enter comments(If any)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gcomment">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Click here to add new Grade</button>
+        <div class="alert alert-warning" id="login-alert" role="alert" style="display: none; margin-top: 20px">
+            Invalid Grade Details !!!
+        </div>
+    </form>
 </div>
+<footer class="bg-light text-center text-lg-start" id="footer-pos">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="dashboard.html">ESD Project, MT2020164 - MT2020170</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 </body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/viewStudent.js"></script>
+<script src="assets/js/addDomain.js"></script>
 </html>
