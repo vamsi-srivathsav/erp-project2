@@ -22,6 +22,7 @@ student_form.addEventListener('submit', async (e) => {
             })
         }).then(
             response => {
+                // console.log(response);
                 if(response['status'] === 200){
                     alert("Domain Details updated successfully !!!");
                     location.reload();
