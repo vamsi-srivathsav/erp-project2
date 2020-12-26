@@ -22,14 +22,12 @@ student_form.addEventListener('submit', async (e) => {
             })
         }).then(
             response => {
-                if(response['status'] === 203){
-                    document.getElementById("login-success").style.display = "none";
-                    document.getElementById("login-alert").style.display = "block";
-
+                if(response['status'] === 200){
+                    alert("Domain Details updated successfully !!!");
+                    location.reload();
                 }else{
-                    document.getElementById("login-alert").style.display = "none";
-                    document.getElementById("login-success").style.display = "block";
-
+                    alert("Please enter valid grade details !!!");
+                    // location.reload();
                 }
             }
         );

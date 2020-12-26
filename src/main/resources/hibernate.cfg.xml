@@ -16,5 +16,6 @@
         <mapping class="com.example.erp.bean.Courses" />
         <mapping class="com.example.erp.bean.Domains" />
         <mapping class="com.example.erp.bean.Grades" />
+        <mapping class="com.example.erp.bean.Users" />
     </session-factory>
 </hibernate-configuration>
